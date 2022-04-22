@@ -5,7 +5,7 @@ To use it press "Use this template" in github
 # Run locally
 
 `npm install`
-`node index.js`
+`npm run watch` 
 
 Connect with Postman
 
