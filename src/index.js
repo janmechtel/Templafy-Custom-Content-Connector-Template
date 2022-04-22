@@ -32,8 +32,8 @@ app.get('/content/', async function(req, res) {
     const domain = req.query.search.indexOf(".com") > 0 ? req.query.search : `${req.query.search}.com`
 
     try {
-        const test = await fetch(`https://logo.clearbit.com/${domain}`);
-        if (test.status === 200) {
+        const request = await fetch(`https://logo.clearbit.com/${domain}`);
+        if (request.status === 200) {
             response.content.push({
                 id: domain,
                 mimeType: "image/png",
@@ -45,7 +45,7 @@ app.get('/content/', async function(req, res) {
         }
 
     } catch (error) {
-
+        console.log(error);
     }
 
     res.send(response);
