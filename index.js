@@ -52,7 +52,7 @@ app.get('/content/', async function(req, res) {
 });
 
 app.get('/', function(req, res) {
-    res.status(200);
+    res.sendStatus(200);
 });
 
 app.listen(PORT, function() {
