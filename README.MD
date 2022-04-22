@@ -26,9 +26,13 @@ Alternatively use Postman or similar tools to send the requests and inspect the 
 
 # Step 4: Deploy 
 
-* create an Azure App Service
-* put the secret
-* use the github action to deploy
+## Example: Deploy to Azure
+
+1. create an Azure Web App (Node 16)
+1. Press `Get Publish Profile` and copy all text
+1. In github go to `Settings` > `Secrets`
+1. Create a new secret `secrets.AZUREAPPSERVICE_PUBLISHPROFILE` , and paste the text from `Get Publish Profile`	
+1. Open `.github/workflows/deploy_main_to_azure_web_app.yml` to adjust the `app-name` to match the name of your Azure Web App 
 
 # Step 5: Configure Templafy 
 
